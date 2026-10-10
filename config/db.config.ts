@@ -10,5 +10,6 @@ export const AppDataSource = new DataSource({
     username: process.env.PGUSER,
     database: process.env.PGDATABASE,
     synchronize: true,
+    logging: ['query', 'error'],
     entities: [User]
 })

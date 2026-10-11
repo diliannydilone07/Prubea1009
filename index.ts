@@ -1,3 +1,4 @@
+import "reflect-metadata"; // Necesario para los decoradores (siempre de primero)
 import express from "express"; // Llamar extensiones que voy a suar
 import userRoutes from "./user/routes/user.route.js"; // Llamar a las rutas de usuario
 import { AppDataSource } from "./config/db.config.js"; // Llamar a la base de datos
@@ -21,4 +22,4 @@ app.listen(port, () => {
   console.log("servidor corriendo");
 });
 
-AppDataSource.initialize()
+AppDataSource.initialize();

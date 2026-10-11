@@ -1,5 +1,5 @@
 import { Exclude, Expose } from "class-transformer";
-import { status } from "../enum/enum";
+import { Status } from "../enum/enum.js";
 
 export class UserDto {
   @Expose()
@@ -8,8 +8,9 @@ export class UserDto {
   @Exclude()
   edad!: number;
 
-  status!: status;
+  @Expose()
+  status!: Status;
 
   @Expose()
-  telefono!: string;
+  telefono?: string;
 }
